@@ -1,0 +1,8 @@
+# Cloudflare Pages — static export (`out/` from the build script).
+# Deploy via Cloudflare dashboard (connect repo) or wrangler pages deploy.
+# Create the Pages project in the dashboard; configure auth locally — not in git.
+# Optional OpenNext / Workers path is documented in README.
+
+name = "bath-restaurant-demos"
+compatibility_date = "2026-09-04"
+pages_build_output_dir = "out"
