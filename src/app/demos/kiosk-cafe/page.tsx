@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { VenueDemoPage } from "@/components/VenueDemoPage";
-import { kioskCafe } from "@/data/venues/kiosk-cafe";
+import { FlagshipVenuePage } from "@/components/FlagshipVenuePage";
+import { kioskCafeFlagship } from "@/data/flagship/kiosk-cafe";
 
 export const metadata: Metadata = {
   title: "Kiosk Cafe",
   description:
-    "Unofficial demo redesign of Kiosk Cafe on Fossgate, York — specialty coffee and seasonal brunch.",
+    "Unofficial flagship demo of Kiosk Cafe, Fossgate, York — rotating specialty coffee and seasonal brunch.",
 };
 
 export default function Page() {
-  return <VenueDemoPage venue={kioskCafe} />;
+  return <FlagshipVenuePage config={kioskCafeFlagship} />;
 }

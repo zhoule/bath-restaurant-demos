@@ -142,8 +142,8 @@ export const pulteneyBridgeCoffee: Venue = {
     href: "tel:01225483339",
   },
   secondaryCta: {
-    label: "TripAdvisor listing",
-    href: "https://www.tripadvisor.co.uk/Restaurant_Review-g186370-d2363239-Reviews-The_Bridge_Coffee_Shop-Bath_Somerset_England.html",
+    label: "Open in Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=17%20Pulteney%20Bridge%2C%20Bath%20BA2%204AY",
   },
   theme: {
     accent: "#1F4E79",

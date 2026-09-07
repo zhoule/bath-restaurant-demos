@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { VenueDemoPage } from "@/components/VenueDemoPage";
-import { gatehouseCoffee } from "@/data/venues/gatehouse-coffee";
+import { FlagshipVenuePage } from "@/components/FlagshipVenuePage";
+import { gatehouseCoffeeFlagship } from "@/data/flagship/gatehouse-coffee";
 
 export const metadata: Metadata = {
   title: "Gatehouse Coffee",
   description:
-    "Unofficial demo redesign of Gatehouse Coffee at Walmgate Bar, York — specialty coffee on the city walls.",
+    "Unofficial flagship demo of Gatehouse Coffee at Walmgate Bar, York — specialty coffee on the medieval walls.",
 };
 
 export default function Page() {
-  return <VenueDemoPage venue={gatehouseCoffee} />;
+  return <FlagshipVenuePage config={gatehouseCoffeeFlagship} />;
 }

@@ -120,15 +120,15 @@ export const gatehouseCoffee: Venue = {
     },
   ],
   contentGaps: [
-    "Gallery uses Wikimedia photos of Walmgate Bar (the building the cafe occupies); cafe-interior food shots were not freely available under clear reuse this run.",
+    "Food/interior from InTravel, Yelp, and Sluurpy public galleries; Wikimedia barbican exteriors retained for before/after only.",
   ],
   cta: {
     label: "Call Gatehouse Coffee",
     href: "tel:01904464050",
   },
   secondaryCta: {
-    label: "Facebook page",
-    href: "https://www.facebook.com/gatehousecoffee",
+    label: "Open in Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=Gatehouse%20Coffee%2C%20Walmgate%20Bar%2C%20York",
   },
   theme: {
     accent: "#3F3A2E",

@@ -97,18 +97,41 @@ export const mattysCafe: Venue = {
       date: "Dec 2025",
       rating: 5,
     },
+    {
+      quote:
+        "Great traditional cafe, bright clean and spacious selling basic no frills cafe fare at a fair price. Service was efficient and friendly and the breakfast was just as it should be. Great Cafe for a no fuss breakfast or snack.",
+      author: "Stuart Johnson",
+      source: "Google (via uk-restaurants.com)",
+      sourceUrl: "https://mattys.uk-restaurants.com/",
+      rating: 5,
+    },
+    {
+      quote:
+        "A friendly local greasy spoon cafe close to Sainsburys and a 15 min walk from the centre. Really one of the very few independent cafes of this type in Bath. Car parking spaces out front and they take credit and debit cards. I had a tasty fry up full English breakfast here for a good price.",
+      author: "Graham D",
+      source: "Google (via uk-restaurants.com / Wanderlog)",
+      sourceUrl: "https://mattys.uk-restaurants.com/",
+      rating: 5,
+    },
+    {
+      quote:
+        "Enjoyed a breakfast with my girlfriend en route to the city centre. Updated the menu.",
+      author: "Steve Woodhull",
+      source: "Google (via uk-restaurants.com)",
+      sourceUrl: "https://mattys.uk-restaurants.com/",
+    },
   ],
   contentGaps: [
-    "Official site image assets returned 403 from this environment; gallery uses Wikimedia street photos of Lower Bristol Road (not the cafe interior).",
-    "Only one clearly attributed public review quote imported — more can be added later without inventing.",
+    "Official site image assets returned 403 from this environment; food/interior from uk-restaurants / Sluurpy / Restaurantji public galleries.",
+    "Uber Eats delivery prices used where shown — eat-in board prices may differ.",
   ],
   cta: {
     label: "Call Matty’s",
     href: "tel:01225444986",
   },
   secondaryCta: {
-    label: "Official menu (HTTP)",
-    href: "http://www.mattyscafe.com/menu.html",
+    label: "Open in Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=15%20St%20Peters%20Terrace%2C%20Lower%20Bristol%20Road%2C%20Bath%20BA2%203BT",
   },
   theme: {
     accent: "#B45309",

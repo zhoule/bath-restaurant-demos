@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { VenueDemoPage } from "@/components/VenueDemoPage";
-import { pulteneyBridgeCoffee } from "@/data/venues/pulteney-bridge-coffee";
+import { FlagshipVenuePage } from "@/components/FlagshipVenuePage";
+import { pulteneyBridgeFlagship } from "@/data/flagship/pulteney-bridge-coffee";
 
 export const metadata: Metadata = {
-  title: "The Bridge Coffee Shop",
+  title: "The Bridge Coffee Shop · Pulteney Bridge",
   description:
-    "Unofficial demo redesign of The Bridge Coffee Shop on Pulteney Bridge, Bath — cream teas and river views.",
+    "Unofficial flagship demo of The Bridge Coffee Shop on Pulteney Bridge, Bath — cream teas, breakfasts, and weir views.",
 };
 
 export default function Page() {
-  return <VenueDemoPage venue={pulteneyBridgeCoffee} />;
+  return <FlagshipVenuePage config={pulteneyBridgeFlagship} />;
 }

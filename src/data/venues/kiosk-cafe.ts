@@ -124,8 +124,8 @@ export const kioskCafe: Venue = {
     },
   ],
   contentGaps: [
-    "Listed project-space site is dead. Gallery mixes Brian’s Coffee Spot public review photos (2016) with Wikimedia Fossgate streetscapes.",
-    "Phone taken from Sluurpy public listing (07518 597866); older write-ups list a different mobile — confirm locally.",
+    "Listed project-space site is dead. Hero/mosaic from Brian’s Coffee Spot public gallery (2016) + TripAdvisor/Sluurpy guest shots.",
+    "Phone from Sluurpy public listing (07518 597866); older write-ups list a different mobile — confirm locally.",
   ],
   cta: {
     label: "Call Kiosk",
