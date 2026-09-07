@@ -7,15 +7,16 @@ export default function HomePage() {
       <header className="border-b border-stone-200/80 bg-white/70 backdrop-blur">
         <div className="mx-auto max-w-5xl px-4 py-10 sm:py-14">
           <p className="text-sm font-medium uppercase tracking-wider text-stone-500">
-            Bath, UK
+            Bath &amp; York, UK
           </p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-            Restaurant & cafe demos
+            Restaurant &amp; cafe demos
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600">
-            Content-driven Next.js redesigns for hospitality venues in Bath.
-            Each demo is clearly labelled as unofficial — warm hospitality UI
-            with honest placeholders where public details are incomplete.
+            Content-driven Next.js redesigns for hospitality venues. Each demo
+            is clearly labelled as unofficial — warm hospitality UI with real
+            public photos where available, attributed reviews only, and honest
+            placeholders where details are incomplete.
           </p>
         </div>
       </header>

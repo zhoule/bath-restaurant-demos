@@ -37,7 +37,7 @@ export function SiteFooter({ venueName, sources }: SiteFooterProps) {
         )}
         <p className="mt-6">
           <Link href="/" className="underline decoration-stone-300 underline-offset-2 hover:text-stone-900">
-            ← All Bath demos
+            ← All demos
           </Link>
         </p>
       </div>

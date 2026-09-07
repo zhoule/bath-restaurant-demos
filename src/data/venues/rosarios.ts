@@ -10,6 +10,7 @@ export const rosarios: Venue = {
   slug: "rosarios",
   name: "Rosario’s Cafe",
   tagline: "A little bit of Italian style in the centre of Bath",
+  heroEyebrow: "Bath · Italian cafe",
   shortDescription:
     "Traditional Italian cafe in a Grade II listed Georgian building on Northumberland Place — coffee, homemade cakes, and Sicilian pastries.",
   about: [
@@ -61,8 +62,17 @@ export const rosarios: Venue = {
       isPlaceholder: true,
     },
   ],
+  photos: [],
+  reviews: [],
+  contentGaps: [
+    "Photos and reviews not imported for this earlier demo — newer cafe demos include public photos and attributed quotes.",
+  ],
   cta: {
-    label: "Visit the official website",
+    label: "Call Rosario’s",
+    href: "tel:01225469590",
+  },
+  secondaryCta: {
+    label: "Official website",
     href: "https://www.rosarioscafe.co.uk/",
   },
   theme: {

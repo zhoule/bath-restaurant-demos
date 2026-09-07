@@ -25,6 +25,25 @@ export type VenueContact = {
   phone?: string;
   email?: string;
   website?: string;
+  facebook?: string;
+};
+
+export type VenuePhoto = {
+  src: string;
+  alt: string;
+  credit: string;
+  /** True when image is a labelled photographic placeholder, not a venue photo. */
+  isPlaceholder?: boolean;
+};
+
+export type VenueReview = {
+  quote: string;
+  author: string;
+  source: string;
+  sourceUrl?: string;
+  date?: string;
+  /** Only include if stated by the public source — never invent. */
+  rating?: number;
 };
 
 export type Venue = {
@@ -39,7 +58,16 @@ export type Venue = {
   contact: VenueContact;
   hours: OpeningHours;
   menuHighlights: MenuHighlight[];
+  photos: VenuePhoto[];
+  reviews: VenueReview[];
+  /** Honest note when photos/menus/reviews are incomplete. */
+  contentGaps?: string[];
+  heroEyebrow: string;
   cta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta?: {
     label: string;
     href: string;
   };
