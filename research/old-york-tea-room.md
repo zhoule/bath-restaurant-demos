@@ -36,6 +36,14 @@ Researched: 2026-09-07 (flagship rebuild). Demo only.
 | `tea-set-detail.jpg` | Floral teapot detail | York Press first look (`16414223`) |
 | `01–04-*.jpg` | Wikimedia Lady Row / Goodramgate exteriors | Kept for before/after strip only |
 
+
+| `guest-storefront-teapot.jpg` | Wide storefront + teapot mural | Spring Tomorrow guest review |
+| `guest-interior-upstairs.jpg` | Busy upstairs room (red wallpaper, beams) | Spring Tomorrow guest review |
+| `guest-biscoff-blondie.jpg` | Biscoff / white chocolate blondie | Spring Tomorrow guest review |
+| `guest-rocky-road-gold.jpg` | Gold-dusted rocky road | Spring Tomorrow guest review |
+| `guest-bacon-sausage-bap.jpg` | Bacon & sausage bap | Spring Tomorrow guest review |
+| `guest-stairs-beams.jpg` | Stairs / beams / chandelier | Spring Tomorrow guest review |
+
 ## Reviews quoted (attributed public mirrors)
 - Yorkshire.com listing quotes
 - restaurants-info.com mirrored reviews: Simon Varney, Nursemel, Kirsty Willson
@@ -53,3 +61,15 @@ Researched: 2026-09-07 (flagship rebuild). Demo only.
 - https://www.yorkshirepost.co.uk/lifestyle/food-and-drink/the-old-york-tea-room-popular-york-cafe-which-operates-at-capacity-to-expand-with-takeaway-next-to-york-minster-8925977
 - https://www.yorkmix.com/we-want-to-create-a-real-statement-in-the-city-york-cafe-reveals-big-plans/
 - https://theoldyorktearoom.restaurants-info.com/
+
+
+## 2026-09-07 deepen (quoteable sample only)
+
+- Re-ordered hero carousel + mosaic for food/interior impact (cream tea, layered cake, cinnamon bun, counter, upstairs table first).
+- Expanded public dish names (no new prices): Lotus Biscoff cheesecake, Rolo blondie, Biscoff/white chocolate blondie, rocky road, Oreo/chocolate brownie, Black forest/Snickers gateau, Bakewell/fruit tart/carrot cake, scrambled eggs, True Tea of Harrogate loose teas, Turkish coffee, baklava, Cuppa N Cake, Scone & Yorkshire Tea.
+- £43.99 Afternoon Experience offer card retained (House of York Substack, Feb 2025).
+- Real FormSubmit inbound request form (fields: name, date, party, phone, optional email, notes).
+- Hours chip near hero; Restaurant JSON-LD + Offer; fade-in with `prefers-reduced-motion`.
+- Added public guest photos from Spring Tomorrow review (Apr 2026) — clearly this venue — saved as `guest-*.jpg` with attribution below.
+- Existing press/gallery assets re-ordered; CSS `object-position` used for hero crop polish.
+- https://www.springtomorrow.com/the-old-york-tea-room-review/

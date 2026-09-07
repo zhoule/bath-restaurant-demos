@@ -17,3 +17,25 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Old York Tea Room — subtle section fade-in (respect reduced motion) */
+@keyframes oy-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.oy-fade {
+  animation: oy-fade-in 0.75s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oy-fade {
+    animation: none;
+  }
+}

@@ -88,3 +88,12 @@ Address: 18 Northumberland Place, Bath BA1 5AR.
 ## Affiliation
 
 Unofficial portfolio demos. Not affiliated with or endorsed by the venues.
+
+
+## Old York Tea Room (flagship sample)
+
+Quoteable single-venue deepen at `/demos/old-york-tea-room`.
+
+- **Inbound table requests** use [FormSubmit](https://formsubmit.co) AJAX → `jack.zxzhou@gmail.com` (no API key). Owner can change the FormSubmit recipient email later by editing `TableRequestForm.tsx` (`FORMSUBMIT_ENDPOINT`). First live submit may require confirming the address via FormSubmit’s activation email.
+- Hours, menu names, and the £43.99 Afternoon Experience offer are from public press/aggregators — confirm with the venue. No invented prices; no fake ResDiary.
+- Photo credits and research: `research/old-york-tea-room.md`.

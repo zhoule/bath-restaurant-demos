@@ -25,10 +25,20 @@ type MosaicItem = {
 
 const MOSAIC: MosaicItem[] = [
   {
-    src: "/venues/old-york-tea-room/window-cakes.jpg",
-    alt: "Cake towers and traybakes glowing in the Goodramgate window",
-    label: "Window cakes",
+    src: "/venues/old-york-tea-room/layered-cake.jpg",
+    alt: "Homemade layered cream cake on a plate",
+    label: "Layered cream cake",
     span: "wide",
+  },
+  {
+    src: "/venues/old-york-tea-room/guest-biscoff-blondie.jpg",
+    alt: "Biscoff and white chocolate blondie with drizzle",
+    label: "Biscoff blondie",
+  },
+  {
+    src: "/venues/old-york-tea-room/guest-rocky-road-gold.jpg",
+    alt: "Gold-dusted rocky road with marshmallows and biscuits",
+    label: "Rocky road",
   },
   {
     src: "/venues/old-york-tea-room/cream-tea.jpg",
@@ -36,24 +46,9 @@ const MOSAIC: MosaicItem[] = [
     label: "Cream tea",
   },
   {
-    src: "/venues/old-york-tea-room/cakes-tea-table.jpg",
-    alt: "Homemade cakes with tea and coffee on a wooden table",
-    label: "Homemade cakes",
-  },
-  {
-    src: "/venues/old-york-tea-room/cheesecake-caramel.jpg",
-    alt: "Homemade baked cheesecake with salted caramel and walnuts",
-    label: "Caramel walnut cheesecake",
-  },
-  {
-    src: "/venues/old-york-tea-room/cinnamon-bun.jpg",
-    alt: "Glazed cinnamon bun on floral china",
-    label: "Cinnamon bun",
-  },
-  {
-    src: "/venues/old-york-tea-room/afternoon-table.jpg",
-    alt: "Afternoon table setting with cakes, silver teapots and floral cups",
-    label: "Upstairs table",
+    src: "/venues/old-york-tea-room/guest-interior-upstairs.jpg",
+    alt: "Busy upstairs seating with red wallpaper, beams and gold mirrors",
+    label: "Upstairs room",
     span: "tall",
   },
   {
@@ -63,14 +58,35 @@ const MOSAIC: MosaicItem[] = [
     span: "wide",
   },
   {
+    src: "/venues/old-york-tea-room/cinnamon-bun.jpg",
+    alt: "Glazed cinnamon bun on floral china",
+    label: "Cinnamon bun",
+  },
+  {
+    src: "/venues/old-york-tea-room/cheesecake-caramel.jpg",
+    alt: "Homemade baked cheesecake with salted caramel and walnuts",
+    label: "Caramel walnut cheesecake",
+  },
+  {
+    src: "/venues/old-york-tea-room/guest-bacon-sausage-bap.jpg",
+    alt: "Bacon and sausage bap on gold-rimmed china",
+    label: "Bacon & sausage bap",
+  },
+  {
     src: "/venues/old-york-tea-room/hot-chocolate.jpg",
     alt: "Hot chocolate topped with pink and white marshmallows",
     label: "Hot chocolate",
   },
   {
-    src: "/venues/old-york-tea-room/bacon-roll-spread.jpg",
-    alt: "Bacon roll with coffee, tea and cake",
-    label: "Bacon roll",
+    src: "/venues/old-york-tea-room/guest-stairs-beams.jpg",
+    alt: "Stairs looking up to beamed seating with rose garland and chandelier",
+    label: "Stairs & beams",
+  },
+  {
+    src: "/venues/old-york-tea-room/window-cakes.jpg",
+    alt: "Cake towers and traybakes glowing in the Goodramgate window",
+    label: "Window cakes",
+    span: "wide",
   },
 ];
 
@@ -101,6 +117,11 @@ const MENU: MenuSection[] = [
         description:
           "Popular pairing listed on public menu aggregators alongside Yorkshire tea.",
       },
+      {
+        name: "Scone & Yorkshire Tea",
+        description:
+          "Plain scone with a proper Yorkshire brew — frequently listed on Sluurpy / aggregator menus.",
+      },
     ],
   },
   {
@@ -109,7 +130,12 @@ const MENU: MenuSection[] = [
       {
         name: "Homemade cakes & blondies",
         description:
-          "Daily counter bakes — brownies, blondies, cheesecakes (press mentions Lotus Biscoff cheesecake and Rolo blondie).",
+          "Daily counter bakes — brownies, blondies, cheesecakes and cupcakes (press).",
+      },
+      {
+        name: "Lotus Biscoff cheesecake",
+        description:
+          "Named in York Press first look as a Thomas-baked speciality.",
       },
       {
         name: "Caramel walnut cheesecake",
@@ -117,8 +143,38 @@ const MENU: MenuSection[] = [
           "Homemade baked cheesecake with salted caramel walnuts — photographed for York Press.",
       },
       {
+        name: "Rolo blondie",
+        description:
+          "Counter special called out in York Press opening coverage.",
+      },
+      {
+        name: "Biscoff & white chocolate blondie",
+        description:
+          "Dense blondie with Biscoff biscuits — guest review (Spring Tomorrow).",
+      },
+      {
+        name: "Rocky road slab",
+        description:
+          "Marshmallows, wafer biscuits, chocolate — guest write-up.",
+      },
+      {
+        name: "Chocolate brownie / Oreo brownie",
+        description:
+          "Listed on public aggregators; flavours rotate with the counter.",
+      },
+      {
         name: "Cinnamon bun",
         description: "Glazed bun listed on public aggregators; a regular counter favourite.",
+      },
+      {
+        name: "Black forest / Snickers gateau",
+        description:
+          "Visitor favourites named in public review mirrors (Simon Varney).",
+      },
+      {
+        name: "Bakewell tart · fruit tart · carrot cake",
+        description:
+          "Classic tray and tart options noted on Sluurpy / aggregator dish lists.",
       },
       {
         name: "Hot pancakes",
@@ -133,7 +189,12 @@ const MENU: MenuSection[] = [
       {
         name: "Bacon & sausage baps",
         description:
-          "Chalkboard call-out on the Goodramgate frontage; savoury menu inside.",
+          "Chalkboard call-out on the Goodramgate frontage; soft roll, buttered — guest favourite.",
+      },
+      {
+        name: "Scrambled eggs on toast",
+        description:
+          "Sit-in breakfast/brunch plate photographed in guest galleries.",
       },
       {
         name: "Paninis & melts",
@@ -141,13 +202,23 @@ const MENU: MenuSection[] = [
           "Visitor notes mention tuna melt and double cheese panini among sit-in favourites.",
       },
       {
-        name: "Loose teas & coffee",
+        name: "Loose teas (True Tea of Harrogate)",
         description:
-          "Selection of loose teas (True Tea of Harrogate noted at opening) plus coffee and Turkish coffee — ask at the counter.",
+          "~15 loose teas at opening — liquorice & mint, peach, Yorkshire, and more; ask at the counter.",
+      },
+      {
+        name: "Coffee · cappuccino · Turkish coffee",
+        description:
+          "Espresso drinks plus Turkish coffee — listed on aggregators and guest reviews.",
       },
       {
         name: "Hot chocolate",
         description: "Often finished with whipped cream and marshmallows.",
+      },
+      {
+        name: "Baklava",
+        description:
+          "Named on public aggregator dish lists alongside cakes and coffee.",
       },
     ],
   },
@@ -194,7 +265,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: v.name,
-    servesCuisine: "Tea room",
+    servesCuisine: ["Tea room", "Cafe", "British"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "72 Goodramgate",
@@ -204,9 +275,35 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
     },
     telephone: "+441904624247",
     url: "https://bath-restaurant-demos.pages.dev/demos/old-york-tea-room/",
-    image:
+    image: [
       "https://bath-restaurant-demos.pages.dev/venues/old-york-tea-room/cream-tea.jpg",
+      "https://bath-restaurant-demos.pages.dev/venues/old-york-tea-room/layered-cake.jpg",
+      "https://bath-restaurant-demos.pages.dev/venues/old-york-tea-room/hero-storefront.jpg",
+    ],
     sameAs: [IG_URL],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "16:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "09:30",
+        closes: "15:00",
+      },
+    ],
+    makesOffer: {
+      "@type": "Offer",
+      name: "Afternoon Experience for Two",
+      description:
+        "Finger sandwiches, homemade scones with jam & clotted cream, cake selection, and a choice of tea.",
+      price: "43.99",
+      priceCurrency: "GBP",
+      availability: "https://schema.org/InStock",
+    },
   };
 
   return (
@@ -283,6 +380,24 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           <p className="mt-3 max-w-md text-sm font-medium text-amber-50/95">
             Small room · walk-ins welcome · call ahead for larger parties
           </p>
+          <div
+            className="mt-4 inline-flex max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-white/25 bg-black/35 px-4 py-2 text-xs text-amber-50/95 backdrop-blur sm:text-sm"
+            aria-label="Opening hours summary"
+          >
+            <span className="font-semibold tracking-wide">Hours</span>
+            <span className="text-white/40" aria-hidden>
+              ·
+            </span>
+            <span>Wed–Sat 9:00–16:00</span>
+            <span className="text-white/40" aria-hidden>
+              ·
+            </span>
+            <span>Sun 9:30–15:00</span>
+            <span className="text-white/40" aria-hidden>
+              ·
+            </span>
+            <span>Mon–Tue closed</span>
+          </div>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href={telHref}
@@ -338,7 +453,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
         </ul>
       </section>
 
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-28 pt-14 sm:pb-16">
+      <main className="oy-fade mx-auto w-full max-w-5xl flex-1 px-4 pb-28 pt-14 sm:pb-16">
         {/* Priced offer card */}
         <section
           aria-labelledby="offer-heading"
@@ -618,7 +733,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </ul>
         </section>
 
-        {/* Request a table — honest, client-side only */}
+        {/* Request a table — real FormSubmit inbound email */}
         <section
           id="request-table"
           aria-labelledby="request-heading"
@@ -636,8 +751,8 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-stone-600">
             Small room · walk-ins welcome · call ahead for larger parties. About
-            14 covers upstairs — we don&apos;t invent online availability or a
-            fake Book button.
+            14 covers upstairs — no fake ResDiary / Book Now. Leave a request
+            below and the tea room will confirm by phone.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -652,7 +767,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               className="text-xl text-stone-900"
               style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
             >
-              Optional: leave a request
+              Request a table
             </h3>
             <div className="mt-4">
               <TableRequestForm phone={phone} telHref={telHref} />
@@ -855,6 +970,10 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               </ul>
             </details>
           )}
+          <p className="mt-5 text-xs leading-relaxed text-stone-500">
+            Next upsell: Sanity CMS for live menu &amp; hours — not wired in this
+            demo yet.
+          </p>
           <p className="mt-6">
             <Link
               href="/"

@@ -6,28 +6,46 @@ type Slide = {
   src: string;
   alt: string;
   caption: string;
+  objectPos?: string;
 };
 
+/** Food-first order for max plate / counter impact. */
 const SLIDES: Slide[] = [
   {
     src: "/venues/old-york-tea-room/cream-tea.jpg",
     alt: "Cream tea with homemade scones, jam and clotted cream",
     caption: "Cream tea",
+    objectPos: "object-center",
   },
   {
-    src: "/venues/old-york-tea-room/hero-storefront.jpg",
-    alt: "The Old York Tea Room storefront on Goodramgate, Lady Row",
-    caption: "Lady Row · Goodramgate",
+    src: "/venues/old-york-tea-room/guest-biscoff-blondie.jpg",
+    alt: "Biscoff and white chocolate blondie with drizzle",
+    caption: "Biscoff blondie",
+    objectPos: "object-center",
+  },
+  {
+    src: "/venues/old-york-tea-room/layered-cake.jpg",
+    alt: "Homemade layered cream cake on a plate",
+    caption: "Layered cake",
+    objectPos: "object-[center_40%]",
+  },
+  {
+    src: "/venues/old-york-tea-room/cinnamon-bun.jpg",
+    alt: "Glazed cinnamon bun on floral china",
+    caption: "Cinnamon bun",
+    objectPos: "object-center",
+  },
+  {
+    src: "/venues/old-york-tea-room/cake-counter-display.jpg",
+    alt: "Counter display of cheesecakes, blondies and traybakes",
+    caption: "Counter cakes",
+    objectPos: "object-center",
   },
   {
     src: "/venues/old-york-tea-room/afternoon-table.jpg",
     alt: "Afternoon table setting with cakes, silver teapots and floral cups",
     caption: "Upstairs table",
-  },
-  {
-    src: "/venues/old-york-tea-room/window-cakes.jpg",
-    alt: "Cake towers and traybakes glowing in the Goodramgate window",
-    caption: "Window cakes",
+    objectPos: "object-[center_30%]",
   },
 ];
 
@@ -58,7 +76,7 @@ export function HeroCarousel() {
       {SLIDES.map((slide, i) => (
         <div
           key={slide.src}
-          className={`absolute inset-0 transition-opacity duration-700 ${
+          className={`absolute inset-0 transition-opacity duration-700 motion-reduce:transition-none ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden={i !== index}
@@ -67,9 +85,7 @@ export function HeroCarousel() {
           <img
             src={slide.src}
             alt={i === index ? slide.alt : ""}
-            className={`h-full w-full object-cover ${
-              i === 1 ? "object-[center_35%]" : "object-center"
-            }`}
+            className={`h-full w-full object-cover ${slide.objectPos ?? "object-center"}`}
             fetchPriority={i === 0 ? "high" : "low"}
           />
         </div>
@@ -82,7 +98,7 @@ export function HeroCarousel() {
             aria-label={`Show ${slide.caption}`}
             aria-current={i === index}
             onClick={() => setIndex(i)}
-            className={`h-2 rounded-full transition-all ${
+            className={`h-2 rounded-full transition-all motion-reduce:transition-none ${
               i === index
                 ? "w-6 bg-white"
                 : "w-2 bg-white/50 hover:bg-white/80"
