@@ -27,7 +27,7 @@ export const oldYorkTeaRoom: Venue = {
   },
   hours: {
     summary: "Wed–Sat ~9am–4pm · Sun ~9:30am–3pm · Mon–Tue closed",
-    note: "Hours from public aggregators (Yorkshire.com / Sluurpy). Confirm before visiting — the room is small and often at capacity.",
+    note: "Hours from public aggregators (Yorkshire.com / Sluurpy / restaurants-info). Confirm before visiting — the room is small and often at capacity.",
   },
   menuHighlights: [
     {
@@ -48,7 +48,7 @@ export const oldYorkTeaRoom: Venue = {
     {
       name: "Afternoon Experience for Two",
       description:
-        "Finger sandwiches, homemade scones with jam & clotted cream, cake selection, and tea — priced publicly in a Feb 2025 local write-up; confirm in person.",
+        "Finger sandwiches, homemade scones with jam & clotted cream, cake selection, and tea — £43.99 in a Feb 2025 local write-up; confirm in person.",
     },
     {
       name: "Hot pancakes",
@@ -59,29 +59,38 @@ export const oldYorkTeaRoom: Venue = {
       name: "Loose teas & coffee",
       description:
         "Selection of loose teas and coffees; exact list changes — ask at the counter.",
-      isPlaceholder: true,
     },
   ],
   photos: [
     {
-      src: "/venues/old-york-tea-room/01-72-goodramgate.jpg",
-      alt: "No. 72 Goodramgate on Lady Row — the tea room’s historic frontage",
-      credit: "Wikimedia Commons — Lady Row, 72 Goodramgate (2024)",
+      src: "/venues/old-york-tea-room/hero-storefront.jpg",
+      alt: "The Old York Tea Room storefront on Goodramgate",
+      credit: "York Press — Maxine Gordon / first look (Lady Row exterior)",
     },
     {
-      src: "/venues/old-york-tea-room/02-lady-row-row.jpg",
-      alt: "Lady Row overhanging timber range along Goodramgate",
-      credit: "Wikimedia Commons — Lady Row, Goodramgate (2024)",
+      src: "/venues/old-york-tea-room/window-cakes.jpg",
+      alt: "Cake towers in the Goodramgate window",
+      credit: "Public guest gallery via restaurants-info.com",
     },
     {
-      src: "/venues/old-york-tea-room/03-lady-row.jpg",
-      alt: "Lady Row street elevation in York’s city centre",
-      credit: "Wikimedia Commons — Lady Row.jpg",
+      src: "/venues/old-york-tea-room/cream-tea.jpg",
+      alt: "Cream tea with scones, jam and clotted cream",
+      credit: "Public guest gallery via restaurants-info.com",
     },
     {
-      src: "/venues/old-york-tea-room/04-goodramgate.jpg",
-      alt: "Goodramgate streetscape near the medieval row",
-      credit: "Wikimedia Commons — Goodramgate, York",
+      src: "/venues/old-york-tea-room/cheesecake-caramel.jpg",
+      alt: "Homemade caramel walnut cheesecake",
+      credit: "York Press — homemade cheesecake at The Old York Tea Room",
+    },
+    {
+      src: "/venues/old-york-tea-room/cake-counter-display.jpg",
+      alt: "Counter cakes and traybakes",
+      credit: "YorkMix / venue social republish",
+    },
+    {
+      src: "/venues/old-york-tea-room/makers-tony-thomas.jpg",
+      alt: "Tony and Thomas Vickers",
+      credit: "Yorkshire Post — Pic credit: The Old York Tea Room",
     },
   ],
   reviews: [
@@ -96,6 +105,30 @@ export const oldYorkTeaRoom: Venue = {
     {
       quote:
         "Had coffee and cakes and OMG the cakes were amazing and huge! Beautifully presented too… The tearoom is tiny but absolutely stunning and full of character and charm.",
+      author: "Nursemel",
+      source: "restaurants-info.com (public review mirror)",
+      sourceUrl: "https://theoldyorktearoom.restaurants-info.com/",
+      rating: 5,
+    },
+    {
+      quote:
+        "What an amazing lovely little hidden gem… The 35 minute wait outside to get in was well worth it. The owners Tony and Tomas were super friendly… The best black forest gateau, a brownie with a chocolate bourbon buried on top and snickers gateau.",
+      author: "Simon Varney",
+      source: "restaurants-info.com (public review mirror)",
+      sourceUrl: "https://theoldyorktearoom.restaurants-info.com/",
+      rating: 5,
+    },
+    {
+      quote:
+        "Absolutely stunning tea room with the most amazing friendly hosts! Worth the wait in the queue 100%. My partners sandwich was huge and tasty and my home made warmed scone with lashings of cream and jam.",
+      author: "Kirsty Willson",
+      source: "restaurants-info.com (public review mirror)",
+      sourceUrl: "https://theoldyorktearoom.restaurants-info.com/",
+      rating: 5,
+    },
+    {
+      quote:
+        "This is the 2nd time I've been here and once again, I'm blown away… The food was the highest quality possible and the decor was just as amazing as the food. Such a relaxing and calming atmosphere.",
       author: "Visitor (quoted on Yorkshire.com listing)",
       source: "Yorkshire.com listing",
       sourceUrl:
@@ -103,8 +136,8 @@ export const oldYorkTeaRoom: Venue = {
     },
   ],
   contentGaps: [
-    "Interior and cake-counter photos were not available under clear open licences this run — gallery uses Wikimedia exteriors of Lady Row / 72 Goodramgate.",
-    "No full official digital menu; dish names come from press and aggregators.",
+    "No full official digital menu PDF; dish names from press and aggregators.",
+    "Owner Instagram/GBP interiors not bulk-exported this run — guest galleries + press used instead.",
   ],
   cta: {
     label: "Call the tea room",
@@ -115,8 +148,8 @@ export const oldYorkTeaRoom: Venue = {
     href: "https://www.google.com/maps/search/?api=1&query=72%20Goodramgate%2C%20York%20YO1%207LF",
   },
   theme: {
-    accent: "#7A1F2B",
-    accentSoft: "#F6E8E4",
+    accent: "#6B3E2E",
+    accentSoft: "#F5EDE4",
   },
   sources: [
     {
@@ -130,6 +163,18 @@ export const oldYorkTeaRoom: Venue = {
     {
       label: "Local Substack refresh note",
       url: "https://houseofyorkholidayhomes.substack.com/p/old-york-tea-room-unveils-a-fresh",
+    },
+    {
+      label: "Yorkshire Post expansion feature",
+      url: "https://www.yorkshirepost.co.uk/lifestyle/food-and-drink/the-old-york-tea-room-popular-york-cafe-which-operates-at-capacity-to-expand-with-takeaway-next-to-york-minster-8925977",
+    },
+    {
+      label: "YorkMix Choice Awards / features",
+      url: "https://www.yorkmix.com/we-want-to-create-a-real-statement-in-the-city-york-cafe-reveals-big-plans/",
+    },
+    {
+      label: "restaurants-info.com gallery & reviews",
+      url: "https://theoldyorktearoom.restaurants-info.com/",
     },
   ],
 };
