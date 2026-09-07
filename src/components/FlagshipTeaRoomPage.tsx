@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
-import { DemoBanner } from "@/components/DemoBanner";
 import type { Venue } from "@/data/venues/types";
+import { HeroCarousel } from "@/components/old-york/HeroCarousel";
+import { TableRequestForm } from "@/components/old-york/TableRequestForm";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -162,6 +163,23 @@ const HOURS = [
   { day: "Sunday", hours: "9:30 – 15:00" },
 ];
 
+const IG_URL = "https://www.instagram.com/theoldyorktea/";
+const MAP_EMBED =
+  "https://maps.google.com/maps?q=72%20Goodramgate%2C%20York%20YO1%207LF&z=16&output=embed";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+    </svg>
+  );
+}
+
 export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
   const v = venue;
   const mapsUrl =
@@ -186,7 +204,9 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
     },
     telephone: "+441904624247",
     url: "https://bath-restaurant-demos.pages.dev/demos/old-york-tea-room/",
-    image: "https://bath-restaurant-demos.pages.dev/venues/old-york-tea-room/hero-storefront.jpg",
+    image:
+      "https://bath-restaurant-demos.pages.dev/venues/old-york-tea-room/cream-tea.jpg",
+    sameAs: [IG_URL],
   };
 
   return (
@@ -201,18 +221,50 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 1. Atmosphere hero */}
-      <section className="relative flex min-h-[88svh] items-end">
-        <DemoBanner variant="discreet" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/venues/old-york-tea-room/hero-storefront.jpg"
-          alt="The Old York Tea Room storefront on Goodramgate, Lady Row"
-          className="absolute inset-0 h-full w-full object-cover object-[center_35%]"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
-        <div className="relative mx-auto w-full max-w-5xl px-4 pb-12 pt-28 sm:pb-16">
+      {/* Desktop persistent CTA header */}
+      <header className="sticky top-0 z-50 hidden border-b border-[#E8DFD4]/80 bg-[#FAF7F2]/95 backdrop-blur md:block">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
+          <a
+            href="#top"
+            className="text-sm font-semibold tracking-wide text-[#6B3E2E]"
+            style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
+          >
+            The Old York Tea Room
+          </a>
+          <nav className="flex items-center gap-2" aria-label="Quick actions">
+            <a
+              href={IG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-stone-700 hover:bg-[#F5EDE4]"
+              aria-label="Instagram @theoldyorktea"
+            >
+              <InstagramIcon className="h-4 w-4" />
+              <span className="hidden lg:inline">@theoldyorktea</span>
+            </a>
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-[#6B3E2E]/30 bg-white px-4 py-2 text-sm font-semibold text-[#6B3E2E]"
+            >
+              Directions
+            </a>
+            <a
+              href={telHref}
+              className="inline-flex items-center rounded-full bg-[#6B3E2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#5a3426]"
+            >
+              Call {phone}
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* 1. Food-forward hero carousel */}
+      <section id="top" className="relative flex min-h-[88svh] items-end">
+        <HeroCarousel />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/15" />
+        <div className="relative mx-auto w-full max-w-5xl px-4 pb-14 pt-28 sm:pb-16">
           <p className="text-xs font-medium uppercase tracking-[0.22em] text-amber-100/90">
             {v.heroEyebrow}
           </p>
@@ -228,6 +280,9 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           <p className="mt-3 text-sm text-stone-200/85">
             72 Goodramgate · Lady Row · {phone}
           </p>
+          <p className="mt-3 max-w-md text-sm font-medium text-amber-50/95">
+            Small room · walk-ins welcome · call ahead for larger parties
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href={telHref}
@@ -242,6 +297,12 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               className="inline-flex items-center rounded-full border border-white/45 bg-white/15 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/25"
             >
               Directions
+            </a>
+            <a
+              href="#request-table"
+              className="inline-flex items-center rounded-full border border-white/35 bg-transparent px-6 py-3 text-sm font-semibold text-white/95 hover:bg-white/10"
+            >
+              Request a table
             </a>
           </div>
         </div>
@@ -278,8 +339,59 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
       </section>
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-28 pt-14 sm:pb-16">
-        {/* 3. Food mosaic */}
-        <section aria-labelledby="kitchen-heading">
+        {/* Priced offer card */}
+        <section
+          aria-labelledby="offer-heading"
+          className="overflow-hidden rounded-3xl border border-[#6B3E2E]/20 bg-white shadow-sm"
+        >
+          <div className="grid md:grid-cols-5">
+            <div className="relative md:col-span-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/venues/old-york-tea-room/cakes-tea-table.jpg"
+                alt="Homemade cakes with tea on a wooden table"
+                className="h-48 w-full object-cover md:h-full"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex flex-col justify-center px-6 py-8 sm:px-8 md:col-span-3">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#6B3E2E]">
+                Ritual offer
+              </p>
+              <h2
+                id="offer-heading"
+                className="mt-2 text-2xl text-stone-900 sm:text-3xl"
+                style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
+              >
+                Afternoon Experience for Two
+              </h2>
+              <p
+                className="mt-2 text-3xl text-[#6B3E2E]"
+                style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
+              >
+                £43.99
+              </p>
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-relaxed text-stone-700">
+                <li>Finger sandwiches</li>
+                <li>Homemade scones with jam &amp; clotted cream</li>
+                <li>Cake selection</li>
+                <li>Choice of tea</li>
+              </ul>
+              <p className="mt-3 text-xs text-stone-500">
+                Price from a Feb 2025 local write-up — confirm in person.
+              </p>
+              <a
+                href={telHref}
+                className="mt-6 inline-flex w-fit rounded-full bg-[#6B3E2E] px-6 py-3 text-sm font-semibold text-white hover:bg-[#5a3426]"
+              >
+                Call to enquire · {phone}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Food mosaic */}
+        <section aria-labelledby="kitchen-heading" className="mt-16">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#6B3E2E]">
             From the kitchen
           </p>
@@ -323,7 +435,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </ul>
         </section>
 
-        {/* 4. Menu editorial */}
+        {/* Menu editorial */}
         <section
           aria-labelledby="menu-heading"
           className="mt-16 rounded-3xl bg-[#F5EDE4] px-5 py-10 sm:px-10"
@@ -383,7 +495,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </div>
         </section>
 
-        {/* 5. Maker / Lady Row story */}
+        {/* Maker / Lady Row story */}
         <section
           aria-labelledby="maker-heading"
           className="mt-16 grid items-center gap-8 md:grid-cols-2"
@@ -446,7 +558,7 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </div>
         </section>
 
-        {/* 6. Review wall */}
+        {/* Review wall */}
         <section aria-labelledby="reviews-heading" className="mt-16">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
@@ -506,52 +618,49 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
           </ul>
         </section>
 
-        {/* Optional before/after outreach strip */}
+        {/* Request a table — honest, client-side only */}
         <section
-          aria-labelledby="before-after-heading"
-          className="mt-16 overflow-hidden rounded-3xl border border-[#E8DFD4] bg-white"
+          id="request-table"
+          aria-labelledby="request-heading"
+          className="mt-16 rounded-3xl border border-[#E8DFD4] bg-white p-6 shadow-sm sm:p-8"
         >
-          <div className="border-b border-[#E8DFD4] px-5 py-4 sm:px-6">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#6B3E2E]">
-              Outreach note
-            </p>
-            <h2
-              id="before-after-heading"
-              className="mt-1 text-xl text-stone-900"
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#6B3E2E]">
+            Tables
+          </p>
+          <h2
+            id="request-heading"
+            className="mt-2 text-3xl text-stone-900 sm:text-4xl"
+            style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
+          >
+            Walk-ins welcome
+          </h2>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-stone-600">
+            Small room · walk-ins welcome · call ahead for larger parties. About
+            14 covers upstairs — we don&apos;t invent online availability or a
+            fake Book button.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={telHref}
+              className="inline-flex rounded-full bg-[#6B3E2E] px-6 py-3 text-sm font-semibold text-white"
+            >
+              Call to reserve · {phone}
+            </a>
+          </div>
+          <div className="mt-8 border-t border-[#E8DFD4] pt-8">
+            <h3
+              className="text-xl text-stone-900"
               style={{ fontFamily: "var(--font-oy-display), Georgia, serif" }}
             >
-              Maps listing only → a page that feels like the shop
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2">
-            <figure className="relative border-b border-[#E8DFD4] sm:border-b-0 sm:border-r">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/venues/old-york-tea-room/01-72-goodramgate.jpg"
-                alt="Street exterior of Lady Row / 72 Goodramgate"
-                className="aspect-[4/3] w-full object-cover"
-                loading="lazy"
-              />
-              <figcaption className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                Before · street listing energy
-              </figcaption>
-            </figure>
-            <figure className="relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/venues/old-york-tea-room/window-cakes.jpg"
-                alt="Cake window display with warm pendant lights"
-                className="aspect-[4/3] w-full object-cover"
-                loading="lazy"
-              />
-              <figcaption className="absolute left-3 top-3 rounded-full bg-[#6B3E2E]/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                After · their cakes &amp; glow
-              </figcaption>
-            </figure>
+              Optional: leave a request
+            </h3>
+            <div className="mt-4">
+              <TableRequestForm phone={phone} telHref={telHref} />
+            </div>
           </div>
         </section>
 
-        {/* 7. Visit */}
+        {/* Visit — map embed + IG */}
         <section
           aria-labelledby="visit-heading"
           className="mt-16 grid gap-8 rounded-3xl border border-[#E8DFD4] bg-white p-6 shadow-sm sm:grid-cols-2 sm:p-8"
@@ -585,20 +694,32 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               </a>
             </p>
             <a
-              href={mapsUrl}
+              href={IG_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex rounded-full border border-[#6B3E2E]/30 bg-[#F5EDE4] px-5 py-2.5 text-sm font-semibold text-[#6B3E2E]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6B3E2E]"
             >
-              Open in Google Maps →
+              <InstagramIcon className="h-5 w-5" />
+              @theoldyorktea on Instagram
             </a>
-            <div className="mt-6 overflow-hidden rounded-2xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/venues/old-york-tea-room/storefront-window-glow.jpg"
-                alt="Storefront window glowing with cakes and pendant lights"
-                className="aspect-[16/10] w-full object-cover"
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full border border-[#6B3E2E]/30 bg-[#F5EDE4] px-5 py-2.5 text-sm font-semibold text-[#6B3E2E]"
+              >
+                Open in Google Maps →
+              </a>
+            </div>
+            <div className="mt-6 overflow-hidden rounded-2xl border border-[#E8DFD4]">
+              <iframe
+                title="Map — 72 Goodramgate, Lady Row, York"
+                src={MAP_EMBED}
+                className="aspect-[16/10] w-full border-0"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
             </div>
           </div>
@@ -626,10 +747,19 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               seating; no wheelchair access upstairs (takeaway from the street
               is offered).
             </p>
+            <div className="mt-6 overflow-hidden rounded-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/venues/old-york-tea-room/storefront-window-glow.jpg"
+                alt="Storefront window glowing with cakes and pendant lights"
+                className="aspect-[16/10] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
-        {/* 8. Closing CTA */}
+        {/* Closing CTA */}
         <section
           aria-labelledby="closing-heading"
           className="mt-16 rounded-3xl bg-[#6B3E2E] px-6 py-12 text-center text-white sm:px-10"
@@ -642,8 +772,8 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
             Come for cake. Stay for the beams.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-amber-50/90">
-            Unofficial preview using public information. Call or find us on
-            Goodramgate — we don’t invent today’s availability.
+            Small room · walk-ins welcome · call ahead for larger parties. Find
+            us on Goodramgate — we don’t invent today’s availability.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
@@ -659,6 +789,15 @@ export function FlagshipTeaRoomPage({ venue }: { venue: Venue }) {
               className="inline-flex rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white"
             >
               Directions
+            </a>
+            <a
+              href={IG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white"
+            >
+              <InstagramIcon className="h-4 w-4" />
+              Instagram
             </a>
           </div>
         </section>
