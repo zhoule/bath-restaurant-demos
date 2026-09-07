@@ -2,7 +2,8 @@ import type { Venue } from "./types";
 
 /**
  * Content drawn from the public site https://www.rosarioscafe.co.uk/
- * (fetched Sep 2026). Hours and menu details can change — verify before visiting.
+ * and public review/photo galleries (fetched Sep 2026).
+ * Hours and menu details can change — verify before visiting.
  * No invented reviews, prices, or ratings.
  */
 export const rosarios: Venue = {
@@ -35,37 +36,88 @@ export const rosarios: Venue = {
     summary:
       "Mon–Wed & Sat 8am–5pm · Thu–Fri 8am–7pm · Sun 9:30am–4pm",
     note:
-      "Hours as published on rosarioscafe.co.uk (contact page). Other pages list slightly different times — please confirm with the cafe before visiting.",
+      "Hours as published on rosarioscafe.co.uk (contact / menus pages). Aggregators sometimes list different times — please confirm with the cafe before visiting.",
     sourceUrl: "https://www.rosarioscafe.co.uk/contact-us.aspx",
   },
   menuHighlights: [
     {
-      name: "Italian coffee & leaf tea",
+      name: "Sicilian cannoli & afternoon tea",
       description:
-        "Locally roasted speciality coffee and a full range of quality leaf teas (D J Miles, Porlock).",
+        "Mini cannoli / aragostine from £2.50; Sicilian Afternoon Tea £9 with a regular hot drink — official 2026 sweets PDF.",
     },
     {
-      name: "Homemade & Sicilian cakes",
+      name: "The Rosario coffee",
       description:
-        "Home-made cakes plus traditional Sicilian cakes and pastries (cannoli); gluten-free options for most.",
+        "House signature: double espresso, condensed milk, chocolate & steamed milk (£4.95) — hot drinks PDF.",
     },
     {
       name: "All-day breakfast",
       description:
-        "A generous collection of all-day breakfast options — see the in-cafe menu for current dishes.",
-      isPlaceholder: true,
+        "Full English / vegetarian £14.75; potato cake with avocado & poached egg from £12.75 — brunch PDF.",
     },
     {
-      name: "Lighter meals",
+      name: "Nonna’s meatballs & arancini",
       description:
-        "Panini, salads, homemade soup, and sandwiches. Exact dishes and prices are not listed here — ask in store.",
-      isPlaceholder: true,
+        "Sicilian meatballs with fresh pasta £18.95; arancino from £8.50 — lunch PDF.",
     },
   ],
-  photos: [],
-  reviews: [],
-  contentGaps: [
-    "Photos and reviews not imported for this earlier demo — newer cafe demos include public photos and attributed quotes.",
+  photos: [
+    {
+      src: "/venues/rosarios/hero-storefront.jpg",
+      alt: "Rosario’s Cafe storefront on Northumberland Place",
+      credit: "TripAdvisor media CDN (public guest/listing photo)",
+    },
+    {
+      src: "/venues/rosarios/cannoli-plate.jpg",
+      alt: "Plate of Sicilian cannoli",
+      credit: "TripAdvisor media CDN",
+    },
+    {
+      src: "/venues/rosarios/counter-cannoli-case.jpg",
+      alt: "Cannoli case and retail coffee",
+      credit: "Sluurpy foto CDN",
+    },
+    {
+      src: "/venues/rosarios/full-english.jpg",
+      alt: "Full English breakfast",
+      credit: "Sluurpy foto CDN",
+    },
+    {
+      src: "/venues/rosarios/interior-seating.jpg",
+      alt: "Interior seating",
+      credit: "Official gallery — rosarioscafe.co.uk",
+    },
+    {
+      src: "/venues/rosarios/latte-art-mugs.jpg",
+      alt: "Latte art mugs",
+      credit: "Sluurpy foto CDN",
+    },
+  ],
+  reviews: [
+    {
+      quote:
+        "Amazing cannoli — Hazelnut and Pistachio. Shells beautifully crisp with plenty of filling.",
+      author: "Yasmin Jemmott",
+      source: "Google",
+      rating: 5,
+      sourceUrl: "https://www.sluurpy.co.uk/bath/restaurant/1688023/rosarios",
+    },
+    {
+      quote:
+        "Genuine Italian cafe — cozy atmosphere. My favourite is crema al caffè. More seating upstairs.",
+      author: "Siri",
+      source: "Google",
+      rating: 5,
+      sourceUrl: "https://www.sluurpy.co.uk/bath/restaurant/1688023/rosarios",
+    },
+    {
+      quote:
+        "Nonna’s Sicilian meatballs, arancino, superb coffee and cakes. Stop here — it’s fantastic.",
+      author: "David P",
+      source: "Google",
+      rating: 5,
+      sourceUrl: "https://www.sluurpy.co.uk/bath/restaurant/1688023/rosarios",
+    },
   ],
   cta: {
     label: "Call Rosario’s",
@@ -88,6 +140,18 @@ export const rosarios: Venue = {
     {
       label: "Contact / hours",
       url: "https://www.rosarioscafe.co.uk/contact-us.aspx",
+    },
+    {
+      label: "Menus (PDF)",
+      url: "https://www.rosarioscafe.co.uk/menus.aspx",
+    },
+    {
+      label: "Gallery",
+      url: "https://www.rosarioscafe.co.uk/gallery.aspx",
+    },
+    {
+      label: "Sluurpy (Google review mirrors)",
+      url: "https://www.sluurpy.co.uk/bath/restaurant/1688023/rosarios",
     },
   ],
 };

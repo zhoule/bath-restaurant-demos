@@ -10,8 +10,8 @@ export type { Venue, VenueStatus, MenuHighlight, VenuePhoto, VenueReview } from 
 
 /** Registry of all demo venues. Add new venues here. */
 export const venues: Venue[] = [
-  rosarios,
   oldYorkTeaRoom,
+  rosarios,
   pulteneyBridgeCoffee,
   mattysCafe,
   gatehouseCoffee,

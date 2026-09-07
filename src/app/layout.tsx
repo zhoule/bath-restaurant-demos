@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bath Restaurant Demos",
-    template: "%s · Bath Restaurant Demos",
+    default: "Hospitality demos · Bath & York",
+    template: "%s · Hospitality demos",
   },
   description:
-    "Unofficial Next.js demo redesigns for cafes and restaurants in Bath, UK. Not affiliated with the venues.",
+    "Unofficial Next.js redesign demos for cafes and tea rooms in Bath & York — studio portfolio experiments, not affiliated with the venues.",
 };
 
 export default function RootLayout({

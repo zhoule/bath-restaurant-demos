@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { VenueDemoPage } from "@/components/VenueDemoPage";
-import { rosarios } from "@/data/venues/rosarios";
+import { FlagshipVenuePage } from "@/components/FlagshipVenuePage";
+import { rosariosFlagship } from "@/data/flagship/rosarios";
 
 export const metadata: Metadata = {
   title: "Rosario’s Cafe",
   description:
-    "Unofficial demo redesign of Rosario’s Cafe, Bath UK — Italian coffee, cakes, and hospitality in Northumberland Place.",
+    "Unofficial flagship demo of Rosario’s Cafe, Northumberland Place, Bath — Sicilian cannoli, Italian coffee, and all-day brunch.",
 };
 
 export default function RosariosPage() {
-  return <VenueDemoPage venue={rosarios} />;
+  return <FlagshipVenuePage config={rosariosFlagship} />;
 }
